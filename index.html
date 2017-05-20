@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Employee Data Management</title>
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+	<!-- Bootswatch Styling for Improving the Aesthetics -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.6/flatly/bootstrap.min.css">
+
+	<!-- Font Awesome CSS Icons (For cool glyphicons) -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+	<!-- Style to fix the issue of text extending past panel length -->
+	<style>
+		.panel-body a 
+		{
+		    word-break:break-all
+		}
+	</style>
+</head>
+<body>
+
+<!-- Main Bootstrap Search -->
+<div class="container">
+
+	<!-- Jumbotron for Title -->
+	<div class="jumbotron" style="background-color: #000000 ; color: white;">
+		<h1 class="text-center"><strong>Employee Data Management</strong></h1>
+		<br>
+		<h4>A Comprehensive Directory of Employee Billable Hours</h4>
+	</div>
+	<!-- This row will handle all of the retrieved articles -->
+	<div class="row">
+		<div class="col-sm-12">
+		<br>
+
+			<!-- This panel will initially be made up of a panel and wells for each of the articles retrieved -->
+			<div class="panel panel-primary">
+
+				<!-- Panel Heading for the retrieved articles box -->
+				<div class="panel-heading">
+					<h3 class="panel-title"><strong>Current Employees</strong></h3>
+				</div>
+
+				<!-- This main panel will hold each of the resulting articles -->
+				<div class="panel-body" id="currEmployee">
+				<div class="panel panel-default">
+	  <!-- Default panel contents -->
+	<!--  <div class="panel-heading">Panel heading</div> -->
+	<style>
+		table {
+	    font-family: arial, sans-serif;
+	    border-collapse: collapse;
+	    width: 100%;
+	}
+
+	td, th {
+	    border: 1px solid #dddddd;
+	    text-align: left;
+	    padding: 8px;
+	}
+
+	tr:nth-child(even) {
+	    background-color: #dddddd;
+	}
+	</style>
+	</head>
+	<body>
+
+	<table>
+	  <tr>
+	    <th>Emplyee Name</th>
+	    <th>Role</th>
+	    <th>Start Date</th>
+	    <th>Months Worked</th>
+	    <th>Monthly Rate ($)</th>
+	    <th>Total Billed ($)</th>
+	  </tr>
+	  <tr>
+	    <td id=""></td>
+	    <td id=""></td>
+	    <td id=""></td>
+	    <td id="monthsWorked">mW</td>
+	    <td id="monthlyRate">mR</td>
+	    <td id="totalBilled">tB</td>
+	  </tr>
+	  	</table>
+	  
+	  
+	</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Row for Searching New York Times -->
+	<div class="row">
+		<div class="col-sm-12">
+		<br>
+			<!-- First panel is for handling the search parameters -->
+			<div class="panel panel-primary">
+				<div class="panel-heading">
+					<h3 class="panel-title"><strong>Add Employee</strong></h3>
+				</div>
+				<div class="panel-body">
+
+					<!-- Here we create an HTML Form for handling the inputs-->
+					<form role="form">
+
+				  	  <!-- Here we create the text box for capturing the search term-->
+					  <div class="form-group">
+					    <label for="empName">Employee Name</label>
+					    <input type="text" class="form-control" id="employeeName">
+					  </div>
+
+					    <div class="form-group">
+					    <label for="pwd">Role</label>
+						<input type="text" class="form-control" id="employeeRole">			  
+					  </div>
+
+				  	  <!-- -->
+					  <div class="form-group">
+					    <label for="startDate">Start Date (DD/MM/YY)</label>
+					    <input type="text" class="form-control" id="startDate">
+					  </div>
+
+				  	  <!--  -->
+					  <div class="form-group">
+					    <label for="monthlyRate">Monthly Rate</label>
+					    <input type="text" class="form-control" id="monthlyRate">
+					  </div>
+
+					  <!-- Here we have our final submit button -->
+					  <button type="submit" class="btn btn-default" id="submit"> Submit</button>
+  					  
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+	<!-- Footer Region -->
+	<div class="row">
+		<div class="col-sm-12">
+			
+			<!-- Line Break followed by closing -->
+			<hr>
+			<h5 class="text-center"><small>Made by Ahmed with lots and lots of <i class="fa fa-heart"></i></small></h5>
+
+		</div>
+	</div>
+
+</div>
+	
+<!-- jQuery JS -->
+<script src="https://code.jquery.com/jquery.js"></script>
+
+<!-- Code to the Javascript File -->
+<script src="NYTCode.js"></script>
+
+</body>
+</html>
