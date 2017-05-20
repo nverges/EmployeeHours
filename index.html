@@ -13,13 +13,11 @@
 	<!-- Font Awesome CSS Icons (For cool glyphicons) -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
-	<!-- Style to fix the issue of text extending past panel length -->
-	<style>
-		.panel-body a 
-		{
-		    word-break:break-all
-		}
-	</style>
+	<!-- firebase link -->
+	<script src="https://www.gstatic.com/firebasejs/4.0.0/firebase.js"></script>
+
+	<!-- CSS link -->
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 </head>
 <body>
 
@@ -49,53 +47,33 @@
 				<div class="panel-body" id="currEmployee">
 				<div class="panel panel-default">
 	  <!-- Default panel contents -->
-	<!--  <div class="panel-heading">Panel heading</div> -->
-	<style>
-		table {
-	    font-family: arial, sans-serif;
-	    border-collapse: collapse;
-	    width: 100%;
-	}
 
-	td, th {
-	    border: 1px solid #dddddd;
-	    text-align: left;
-	    padding: 8px;
-	}
-
-	tr:nth-child(even) {
-	    background-color: #dddddd;
-	}
-	</style>
-	</head>
-	<body>
-
-	<table>
-	  <tr>
-	    <th>Emplyee Name</th>
-	    <th>Role</th>
-	    <th>Start Date</th>
-	    <th>Months Worked</th>
-	    <th>Monthly Rate ($)</th>
-	    <th>Total Billed ($)</th>
-	  </tr>
-	  <tr>
-	    <td id=""></td>
-	    <td id=""></td>
-	    <td id=""></td>
-	    <td id="monthsWorked">mW</td>
-	    <td id="monthlyRate">mR</td>
-	    <td id="totalBilled">tB</td>
-	  </tr>
-	  	</table>
+				<table>
+				  <tr>
+				    <th>Emplyee Name</th>
+				    <th>Role</th>
+				    <th>Start Date</th>
+				    <th>Months Worked</th>
+				    <th>Monthly Rate ($)</th>
+				    <th>Total Billed ($)</th>
+				  </tr>
+				  <tr>
+				    <td id="name-display"></td>
+				    <td id="role-display"></td>
+				    <td id="startDate-display"></td>
+				    <td id="monthsWorked">months worked</td>
+				    <td id="monthlyRate-display">monthly rate</td>
+				    <td id="totalBilled">total billed</td>
+				  </tr>
+				 </table>
+				  
 	  
-	  
-	</div>
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-	<!-- Row for Searching New York Times -->
+	<!-- Row for Employee Input panel -->
 	<div class="row">
 		<div class="col-sm-12">
 		<br>
@@ -149,7 +127,7 @@
 			
 			<!-- Line Break followed by closing -->
 			<hr>
-			<h5 class="text-center"><small>Made by Ahmed with lots and lots of <i class="fa fa-heart"></i></small></h5>
+			<h5 class="text-center"><small>Made by Jalil, Nick, and Cesar with lots and lots of <i class="fa fa-heart"></i></small></h5>
 
 		</div>
 	</div>
@@ -160,7 +138,7 @@
 <script src="https://code.jquery.com/jquery.js"></script>
 
 <!-- Code to the Javascript File -->
-<script src="NYTCode.js"></script>
+<script src="assets/javascript/script.js"></script>
 
 </body>
 </html>
