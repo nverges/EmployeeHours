@@ -39,6 +39,9 @@ $("#submit").on("click", function(event) {
     monthlyRate: monthlyRate
   });
 
+  // Clear all input fields 
+  $(this).closest('form').find("input[type=text], textarea").val('');
+
 });
 
 // child added function

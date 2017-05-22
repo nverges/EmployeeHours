@@ -17,3 +17,8 @@ tr:nth-child(even) {
 .panel-body a {
     word-break:break-all
 }
+
+h4 {
+	text-align: center;
+}
+
