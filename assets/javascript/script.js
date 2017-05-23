@@ -62,11 +62,18 @@ dataRef.ref().on("child_added", function(snapshot) {
   $("#startDate-display").html(snapshot.val().startDate);
   $("#monthlyRate-display").html(snapshot.val().monthlyRate);
 
-  // append 
-  $("#full-member-list").append("<div class='well'><span id='email'>") + snapshot.val().name +
-  "</span><span id='role'>" + snapshot.val().role +
-  "</span><span id='startDate'>" + snapshot.val().startDate +
-  "</span><span id='monthlyRate'>" + snapshot.val().monthlyRate; "</span></div>"
+  // Add employee to list
+  let employeeRow = $('<tr>');
+  // Append employee info to new <tr>. (Using template strings from ES6)
+  employeeRow.append(`<td>${snapshot.val().name}</td>`);
+  employeeRow.append(`<td>${snapshot.val().role}</td>`);
+  employeeRow.append(`<td>${snapshot.val().startDate}</td>`);
+  employeeRow.append(`<td>Months worked</td>`);
+  employeeRow.append(`<td>${snapshot.val().monthlyRate}</td>`);
+  employeeRow.append(`<td>Total billed</td>`);
+
+  // Append the new employee row in table 
+  $('#employee-table').append(employeeRow);
 
 
 // handle errors
