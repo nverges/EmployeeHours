@@ -57,13 +57,13 @@ dataRef.ref().on("child_added", function(snapshot) {
   console.log(snapshot.val().monthlyRate);
 
   // Calculate months worked (multiply by -1 to remove negative sign)
-  monthsWorked = moment(snapshot.val().startDate).diff(moment(), 'months') * -1;
+  monthsWorked = moment().diff(moment(snapshot.val().startDate), 'months');
   console.log('Months worked: ', monthsWorked);
 
   // Calculate total billed
   totalBilled = monthsWorked * snapshot.val().monthlyRate;
   console.log('Total billed: ', totalBilled);
-  
+
   // Add employee to list
   let employeeRow = $('<tr>');
   // Append employee info to new <tr>. (Using template strings from ES6)
