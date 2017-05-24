@@ -56,21 +56,23 @@ dataRef.ref().on("child_added", function(snapshot) {
   console.log(snapshot.val().startDate);
   console.log(snapshot.val().monthlyRate);
 
-  // change HTML
-  $("#name-display").html(snapshot.val().name);
-  $("#role-display").html(snapshot.val().role);
-  $("#startDate-display").html(snapshot.val().startDate);
-  $("#monthlyRate-display").html(snapshot.val().monthlyRate);
+  // Calculate months worked (multiply by -1 to remove negative sign)
+  monthsWorked = moment(snapshot.val().startDate).diff(moment(), 'months') * -1;
+  console.log('Months worked: ', monthsWorked);
 
+  // Calculate total billed
+  totalBilled = monthsWorked * snapshot.val().monthlyRate;
+  console.log('Total billed: ', totalBilled);
+  
   // Add employee to list
   let employeeRow = $('<tr>');
   // Append employee info to new <tr>. (Using template strings from ES6)
   employeeRow.append(`<td>${snapshot.val().name}</td>`);
   employeeRow.append(`<td>${snapshot.val().role}</td>`);
   employeeRow.append(`<td>${snapshot.val().startDate}</td>`);
-  employeeRow.append(`<td>Months worked</td>`);
+  employeeRow.append(`<td>${monthsWorked}</td>`);
   employeeRow.append(`<td>${snapshot.val().monthlyRate}</td>`);
-  employeeRow.append(`<td>Total billed</td>`);
+  employeeRow.append(`<td>${totalBilled}</td>`);
 
   // Append the new employee row in table 
   $('#employee-table').append(employeeRow);
